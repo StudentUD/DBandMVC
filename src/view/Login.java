@@ -1,13 +1,12 @@
 package view;
 
-import java.awt.event.KeyEvent;
 
-import javax.swing.GroupLayout;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-import javax.swing.LayoutStyle;
+
 import javax.swing.WindowConstants;
 import javax.swing.BoxLayout;
 
@@ -35,7 +34,9 @@ public class Login extends JFrame {
 		lblPassword = new JLabel("Contraseña");
 		btnSingIn = new JButton("Acceder");
 		lblError = new JLabel("############");
-
+		
+		
+		setLocationRelativeTo(null);
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		getContentPane().setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
 
@@ -48,53 +49,111 @@ public class Login extends JFrame {
 		getContentPane().add(lblError);
 		
 
-		
+		pack();
 
 		
 
 		
 	}// </editor-fold>
 
-	
-	
-	void performace(){
-		txtName.addActionListener(new java.awt.event.ActionListener() {
-			public void actionPerformed(java.awt.event.ActionEvent evt) {
-				actionPerformed(evt);
-			}
-		});
-		txtName.addKeyListener(new java.awt.event.KeyAdapter() {
-			public void keyTyped(java.awt.event.KeyEvent evt) {
-				keyTyped(evt);
-			}
-		});
 
-		txtPassword.addActionListener(new java.awt.event.ActionListener() {
-			public void actionPerformed(java.awt.event.ActionEvent evt) {
-				actionPerformed(evt);
-			}
-		});
-		txtPassword.addKeyListener(new java.awt.event.KeyAdapter() {
-			public void keyTyped(java.awt.event.KeyEvent evt) {
-				contraseñaKeyTyped(evt);
-			}
 
-			private void contraseñaKeyTyped(KeyEvent evt) {
-				// TODO Auto-generated method stub
-				
-			}
-		});
 
-		lblPassword.setText("Contraseña :");
+	//////getter and setters
 
-		btnSingIn.setText("Ingresar");
-		btnSingIn.addActionListener(new java.awt.event.ActionListener() {
-			public void actionPerformed(java.awt.event.ActionEvent evt) {
-				actionPerformed(evt);
-			}
-		});
 
-		lblError.setForeground(new java.awt.Color(255, 0, 0));
+	public JTextField getTxtPassword() {
+		return txtPassword;
+	}
+
+
+
+
+	public void setTxtPassword(JTextField txtPassword) {
+		this.txtPassword = txtPassword;
+	}
+
+
+
+
+	public JLabel getLblError() {
+		return lblError;
+	}
+
+
+
+
+	public void setLblError(JLabel lblError) {
+		this.lblError = lblError;
+	}
+
+
+
+
+	public JButton getBtnSingIn() {
+		return btnSingIn;
+	}
+
+
+
+
+	public void setBtnSingIn(JButton btnSingIn) {
+		this.btnSingIn = btnSingIn;
+	}
+
+
+
+
+	public JLabel getLblName() {
+		return lblName;
+	}
+
+
+
+
+	public void setLblName(JLabel lblName) {
+		this.lblName = lblName;
+	}
+
+
+
+
+	public JLabel getLblPassword() {
+		return lblPassword;
+	}
+
+
+
+
+	public void setLblPassword(JLabel lblPassword) {
+		this.lblPassword = lblPassword;
+	}
+
+
+
+
+	public JTextField getTxtName() {
+		return txtName;
+	}
+
+
+
+
+	public void setTxtName(JTextField txtName) {
+		this.txtName = txtName;
+	}
+
+
+
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 	
+	
+	
+	
+	
+
+
 }
