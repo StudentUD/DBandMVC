@@ -1,5 +1,6 @@
 package controller;
 
+import model.LoginModel;
 import model.MainModel;
 import view.MainView;
 
@@ -19,15 +20,15 @@ public class MainController {
 
 	///// Aniandiendo listeners
 	private void addListeners() {
-		
-		//ventana de logueo
-		view.getvLogin().getBtnSingIn().addActionListener((e)-> onActionBtnSingInLogin());
-		
-		//ventana de opciones
-		view.getvOptionMenu().getBtnAddProvedor().addActionListener((e)-> onActionBtnAddProvider());
-		view.getvOptionMenu().getBtnSearchOrden().addActionListener((e)-> onActionBtnSearchOrder());
-		view.getvOptionMenu().getBtnNewOrden().addActionListener((e)-> onActionBtnNewOrder());
-		
+
+		// ventana de logueo
+		view.getvLogin().getBtnSingIn().addActionListener((e) -> onActionBtnSingInLogin());
+
+		// ventana de opciones
+		view.getvOptionMenu().getBtnAddProvedor().addActionListener((e) -> onActionBtnAddProvider());
+		view.getvOptionMenu().getBtnSearchOrden().addActionListener((e) -> onActionBtnSearchOrder());
+		view.getvOptionMenu().getBtnNewOrden().addActionListener((e) -> onActionBtnNewOrder());
+
 	}
 
 	private Object onActionBtnSearchOrder() {
@@ -40,7 +41,7 @@ public class MainController {
 		return null;
 	}
 
-	private void  onActionBtnAddProvider() {
+	private void onActionBtnAddProvider() {
 		view.getvOptionMenu().setVisible(false);
 		view.getvProvider().setVisible(true);
 	}
@@ -49,17 +50,37 @@ public class MainController {
 
 	public void onActionBtnSingInLogin() {
 		System.out.println("work log");
+
+		LoginModel mLogin = new LoginModel();
 		
-		
-		//aqui hacer autenticacion 
-		if(true){
-			
-			view.getvLogin().setVisible(false);
-			view.getvOptionMenu().setVisible(true);
-			
+		if (view.getvLogin().getTxtUserLogin().getText().isEmpty()
+				|| view.getvLogin().getTxtPasswordLogin().getText().isEmpty()) {
+			view.getvLogin().getLblError()
+					.setText("Debe ingresar todos los espacios para poder ingresar al aplicativo");
+
+		} else {
+			if (mLogin.singIn(view.getvLogin().getTxtUserLogin().getText().toLowerCase(),view.getvLogin().getTxtPasswordLogin().getText())) {
+				System.out.println("Usuario logueado");
+				view.getvLogin().setVisible(false);
+				view.getvOptionMenu().setVisible(true);
+			} else {
+
+				view.getvLogin().getLblError().setText("Usuario o contraseña no encontrado");
+
+			}
+
 		}
-		
+
 	}
+
+	//////////////////////////////////////
+
+	private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
+		// TODO add your handling code here:
+
+	}
+
+	//////////////////////////////////////////
 
 	/** getter and setter **/
 	public MainView getView() {

@@ -3,6 +3,22 @@
   <groupId>Elferreteroswing</groupId>
   <artifactId>Elferreteroswing</artifactId>
   <version>1</version>
+  
+  
+  
+  <!--Adicion de postgres-->
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/postgresql/postgresql -->
+        <dependency>
+            <groupId>postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>9.4.1208-jdbc42-atlassian-hosted</version>
+        </dependency>
+    </dependencies>
+  
+  
+  
   <build>
     <sourceDirectory>src</sourceDirectory>
     <resources>
@@ -13,6 +29,9 @@
         </excludes>
       </resource>
     </resources>
+
+
+	<!-- Version de java -->
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>

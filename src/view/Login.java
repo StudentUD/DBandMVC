@@ -17,9 +17,9 @@ public class Login extends JFrame {
     private JTextField txtPassword;
     private JLabel lblError;
     private JButton btnSingIn;
-    private JLabel lblName;
+    private JLabel lblUserLogin;
     private JLabel lblPassword;
-    private JTextField txtName;
+    private JTextField txtUserLogin;
     // End of variables declaration         
 	
 	
@@ -27,9 +27,9 @@ public class Login extends JFrame {
 	
 	public Login() {
 
-		lblName = new JLabel("Nombre");
+		lblUserLogin = new JLabel("Usuario");
 		
-		txtName = new JTextField();
+		txtUserLogin = new JTextField();
 		txtPassword = new JTextField();
 		lblPassword = new JLabel("Contraseña");
 		btnSingIn = new JButton("Acceder");
@@ -41,8 +41,8 @@ public class Login extends JFrame {
 		getContentPane().setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
 
 		
-		getContentPane().add(lblName);
-		getContentPane().add(txtName);
+		getContentPane().add(lblUserLogin);
+		getContentPane().add(txtUserLogin);
 		getContentPane().add(lblPassword);
 		getContentPane().add(txtPassword);
 		getContentPane().add(btnSingIn);
@@ -62,14 +62,14 @@ public class Login extends JFrame {
 	//////getter and setters
 
 
-	public JTextField getTxtPassword() {
+	public JTextField getTxtPasswordLogin() {
 		return txtPassword;
 	}
 
 
 
 
-	public void setTxtPassword(JTextField txtPassword) {
+	public void setTxtPasswordLogin(JTextField txtPassword) {
 		this.txtPassword = txtPassword;
 	}
 
@@ -104,43 +104,43 @@ public class Login extends JFrame {
 
 
 
-	public JLabel getLblName() {
-		return lblName;
+	public JLabel getLblUserLogin() {
+		return lblUserLogin;
 	}
 
 
 
 
-	public void setLblName(JLabel lblName) {
-		this.lblName = lblName;
+	public void setLblUserLogin(JLabel lblName) {
+		this.lblUserLogin = lblName;
 	}
 
 
 
 
-	public JLabel getLblPassword() {
+	public JLabel getLblPasswordLogin() {
 		return lblPassword;
 	}
 
 
 
 
-	public void setLblPassword(JLabel lblPassword) {
+	public void setLblpasswordLogin(JLabel lblPassword) {
 		this.lblPassword = lblPassword;
 	}
 
 
 
 
-	public JTextField getTxtName() {
-		return txtName;
+	public JTextField getTxtUserLogin() {
+		return txtUserLogin;
 	}
 
 
 
 
-	public void setTxtName(JTextField txtName) {
-		this.txtName = txtName;
+	public void setTxtUserLogin(JTextField txtName) {
+		this.txtUserLogin = txtName;
 	}
 
 

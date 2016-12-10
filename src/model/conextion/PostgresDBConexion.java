@@ -1,4 +1,4 @@
-package model;
+package model.conextion;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class PostgresDB {
+public class PostgresDBConexion {
 	
 	  private Connection connection;
 
@@ -19,19 +19,26 @@ public class PostgresDB {
 	    private String password = null;
 
 	    //constructores
-	    public PostgresDB() {
+	    public PostgresDBConexion() {
 
 	        //urlConexionDefault
 	        setIpDatabase("localhost");
 	        setPort("5432");
-	        setNameDatabase("ferreteria");
+	        setNameDatabase("Ferreteria");
 
 	        //user info default
 	        setUser("postgres");
-	        setPassword("postgres2016");
+        setPassword("postgres2016");
+	    
+//	        setUser("admin");
+//	        setPassword("admin");
+	    
+	    
 	    }
+	    
+	    
 
-	    public PostgresDB(String ip, String port, String nameDB, String user, String password) {
+	    public PostgresDBConexion(String ip, String port, String nameDB, String user, String password) {
 	        //url conection
 	        setIpDatabase(ip);
 	        setPort(port);
@@ -42,6 +49,20 @@ public class PostgresDB {
 	        setPassword(password);
 
 	    }
+	    
+	    
+	    public PostgresDBConexion(String nameDB, String user, String password) {
+	        //url conection
+	        setIpDatabase("localhost");
+	        setPort("5432");
+	        setNameDatabase(nameDB);
+
+	        //user info
+	        setUser(user);
+	        setPassword(password);
+
+	    }
+
 
 	    //About conection
 	    static String driverPATH = "org.postgresql.Driver";
@@ -55,7 +76,7 @@ public class PostgresDB {
 	            this.connection = DriverManager.getConnection(url, this.user, this.password);
 	            return this.connection;
 	        } catch (SQLException | ClassNotFoundException ex) {
-	            Logger.getLogger(PostgresDB.class.getName()).log(Level.SEVERE, null, ex);
+	            Logger.getLogger(PostgresDBConexion.class.getName()).log(Level.SEVERE, null, ex);
 	            return null;
 	        }
 	    }
@@ -64,7 +85,7 @@ public class PostgresDB {
 	        try {
 	            connection.close();
 	        } catch (SQLException ex) {
-	            Logger.getLogger(PostgresDB.class.getName()).log(Level.SEVERE, null, ex);
+	            Logger.getLogger(PostgresDBConexion.class.getName()).log(Level.SEVERE, null, ex);
 	        }
 	    }
 
@@ -88,6 +109,14 @@ public class PostgresDB {
 	    public void setPassword(String password) {
 	        this.password = password;
 	    }
+
+		public Connection getConnection() {
+			return conectar();
+		}
+
+
+
+
 
 
 }
