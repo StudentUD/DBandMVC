@@ -17,12 +17,35 @@ public class MainController {
 
 	}
 
-	///// Amiandiendo listeners
+	///// Aniandiendo listeners
 	private void addListeners() {
-		view.getvLogin().getBtnSingIn().addActionListener(e -> onActionBtnSingInLogin());
+		
+		//ventana de logueo
+		view.getvLogin().getBtnSingIn().addActionListener((e)-> onActionBtnSingInLogin());
+		
+		//ventana de opciones
+		view.getvOptionMenu().getBtnAddProvedor().addActionListener((e)-> onActionBtnAddProvider());
+		view.getvOptionMenu().getBtnSearchOrden().addActionListener((e)-> onActionBtnSearchOrder());
+		view.getvOptionMenu().getBtnNewOrden().addActionListener((e)-> onActionBtnNewOrder());
+		
 	}
 
-	/// actions
+	private Object onActionBtnSearchOrder() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	private Object onActionBtnNewOrder() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	private void  onActionBtnAddProvider() {
+		view.getvOptionMenu().setVisible(false);
+		view.getvProvider().setVisible(true);
+	}
+
+	/** acciones llamandadas en los lambda de cada listener **/
 
 	public void onActionBtnSingInLogin() {
 		System.out.println("work log");
@@ -38,7 +61,7 @@ public class MainController {
 		
 	}
 
-	// getter and setter
+	/** getter and setter **/
 	public MainView getView() {
 		return view;
 	}

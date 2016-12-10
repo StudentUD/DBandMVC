@@ -27,6 +27,7 @@ public class OrdenFrame extends JFrame {
 	private JButton btnDone;
 
 	public OrdenFrame() {
+		setLocationRelativeTo(null);
 		getContentPane().setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
 
 		lblDate = new JLabel("Fecha");
@@ -73,7 +74,104 @@ public class OrdenFrame extends JFrame {
 
 		btnDone = new JButton("Hecho");
 		getContentPane().add(btnDone);
+		
+		pack();
 
+	}
+
+	
+	/** getter and setter **/
+	
+	public JTextField getTxtDate() {
+		return txtDate;
+	}
+
+	public void setTxtDate(JTextField txtDate) {
+		this.txtDate = txtDate;
+	}
+
+	public JLabel getLblProveider() {
+		return lblProveider;
+	}
+
+	public void setLblProveider(JLabel lblProveider) {
+		this.lblProveider = lblProveider;
+	}
+
+	public JLabel getLblEmployee() {
+		return lblEmployee;
+	}
+
+	public void setLblEmployee(JLabel lblEmployee) {
+		this.lblEmployee = lblEmployee;
+	}
+
+	public JLabel getLblNoOrden() {
+		return lblNoOrden;
+	}
+
+	public void setLblNoOrden(JLabel lblNoOrden) {
+		this.lblNoOrden = lblNoOrden;
+	}
+
+	public JLabel getLblDate() {
+		return lblDate;
+	}
+
+	public void setLblDate(JLabel lblDate) {
+		this.lblDate = lblDate;
+	}
+
+	public JTextField getTxtEmployee() {
+		return txtEmployee;
+	}
+
+	public void setTxtEmployee(JTextField txtEmployee) {
+		this.txtEmployee = txtEmployee;
+	}
+
+	public JTextField getTxtNoOrden() {
+		return txtNoOrden;
+	}
+
+	public void setTxtNoOrden(JTextField txtNoOrden) {
+		this.txtNoOrden = txtNoOrden;
+	}
+
+	public JTextField getTxtProvider() {
+		return txtProvider;
+	}
+
+	public void setTxtProvider(JTextField txtProvider) {
+		this.txtProvider = txtProvider;
+	}
+
+	public JButton getBtnBSearchProvider() {
+		return btnBSearchProvider;
+	}
+
+	public void setBtnBSearchProvider(JButton btnBSearchProvider) {
+		this.btnBSearchProvider = btnBSearchProvider;
+	}
+
+	public JButton getBtnCancel() {
+		return btnCancel;
+	}
+
+	public void setBtnCancel(JButton btnCancel) {
+		this.btnCancel = btnCancel;
+	}
+
+	public JButton getBtnDone() {
+		return btnDone;
+	}
+
+	public void setBtnDone(JButton btnDone) {
+		this.btnDone = btnDone;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 
 }

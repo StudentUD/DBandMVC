@@ -61,6 +61,9 @@ public class Provider extends JFrame {
 		getContentPane().add(btnCancelSingUpProvider);
 
 		getContentPane().add(lblError);
+		
+		setLocationRelativeTo(null);
+		pack();
 
 	}// </editor-fold>
 

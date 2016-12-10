@@ -12,6 +12,8 @@ public class MainView {
 		
 		vLogin = new Login();
 		vOptionMenu = new OptionMenu();
+		vProvider = new Provider();
+		vOrdenFrame = new OrdenFrame();
 		
 			
 		
