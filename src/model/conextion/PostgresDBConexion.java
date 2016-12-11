@@ -68,7 +68,9 @@ public class PostgresDBConexion {
 	    static String driverPATH = "org.postgresql.Driver";
 	    static String driver = "jdbc:postgresql://";
 
-	    public Connection conectar() {
+	    private  Connection conectar() {
+	    	System.out.println("creando conecion ");
+	    	
 	        String url = driver + ipDatabase + ":" + port + "/" + nameDatabase;
 
 	        try {
@@ -111,6 +113,7 @@ public class PostgresDBConexion {
 	    }
 
 		public Connection getConnection() {
+			
 			return conectar();
 		}
 
