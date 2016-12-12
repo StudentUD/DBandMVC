@@ -31,8 +31,13 @@ public class MainController {
 		// ventana provider
 
 		view.getvOrdenFrame().getBtnBSearchProvider().addActionListener((e) -> onActionBtnSearchProvider());
-		view.getvOrdenFrame().getBtnBSearchProvider().addActionListener((e) -> onActionBtnAddProvider());
-		view.getvOrdenFrame().getBtnBSearchProvider().addActionListener((e) -> onActionBtnAddProvider());
+		view.getvOrdenFrame().getBtnDone().addActionListener((e)-> onActionBtnDoneNewOrder());
+		view.getvOrdenFrame().getBtnCancel().addActionListener((e)-> onActionBtnSearchOrder());
+	}
+
+	private void onActionBtnDoneNewOrder() {
+		view.getvOrdenFrame().setVisible(false);
+		view.getvSelectItems().setVisible(true);
 	}
 
 	private Object onActionBtnSearchProvider() {
@@ -46,9 +51,11 @@ public class MainController {
 
 	}
 
-	private Object onActionBtnNewOrder() {
-		// TODO Auto-generated method stub
-		return null;
+	private void  onActionBtnNewOrder() {
+		System.out.println("eroor");
+		view.getvOrdenFrame().setVisible(true);
+		view.getvOptionMenu().setVisible(false);
+		
 	}
 
 	private void onActionBtnAddProvider() {

@@ -8,6 +8,8 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.BoxLayout;
 import java.awt.FlowLayout;
+import java.util.ArrayList;
+
 import javax.swing.JLabel;
 import javax.swing.JComboBox;
 import javax.swing.JButton;
@@ -18,6 +20,13 @@ public class SelectItems extends JFrame {
 		
 	private static final long serialVersionUID = 1L;
 	private JPanel paneItemes;
+	private JButton btnAddItem;
+	
+	
+	ArrayList<JPanel> aItems = new ArrayList<>();
+	private JComboBox cbxTipo;
+	private JComboBox cbxItem;
+	private JSpinner spQuantity;
 
 	public SelectItems() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -34,29 +43,21 @@ public class SelectItems extends JFrame {
 		JLabel lblNewLabel = new JLabel("encabezado se sobrescibira luego con info de factura");
 		paneHeader.add(lblNewLabel);
 		
-		JPanel panel = new JPanel();
-		paneItemes.add(panel);
-		
-		JLabel lblNewLabel_1 = new JLabel("itmem ");
-		panel.add(lblNewLabel_1);
-		
-		JButton btnRemoveItem = new JButton("Elimina Item");
-		panel.add(btnRemoveItem);
 		
 		JPanel paneAddItem = new JPanel();
 		paneItemes.add(paneAddItem);
 		paneAddItem.setLayout(new BoxLayout(paneAddItem, BoxLayout.X_AXIS));
 		
-		JComboBox cbxTipo = new JComboBox();
+		cbxTipo = new JComboBox();
 		paneAddItem.add(cbxTipo);
 		
-		JComboBox cbxItem = new JComboBox();
+		cbxItem = new JComboBox();
 		paneAddItem.add(cbxItem);
 		
-		JSpinner spQuantity = new JSpinner();
+		spQuantity = new JSpinner();
 		paneAddItem.add(spQuantity);
 		
-		JButton btnAddItem = new JButton("Añadir Item");
+		btnAddItem = new JButton("Añadir Item");
 		paneAddItem.add(btnAddItem);
 		
 		JPanel paneDesicion = new JPanel();
@@ -68,6 +69,32 @@ public class SelectItems extends JFrame {
 		
 		JButton btnOk = new JButton("Ok");
 		paneDesicion.add(btnOk);
+	}
+	
+	
+	
+	private void onActionAdditem(){
+		String tipo = cbxTipo.getSelectedItem().toString();
+		String item = cbxItem.getSelectedItem().toString();
+		String cantidad = spQuantity.getValue().toString();
+		
+		
+		addItemsPane(tipo, item, cantidad);
+		
+	}
+	
+	private void   addItemsPane(String type, String item, String quantity){
+		
+		JPanel panelDetailItem = new JPanel();
+		paneItemes.add(panelDetailItem);
+		
+		JLabel lblNewLabel_1 = new JLabel(type +item+ quantity);
+		panelDetailItem.add(lblNewLabel_1);
+		
+		JButton btnRemoveItem = new JButton("Elimina Item");
+		panelDetailItem.add(btnRemoveItem);
+		
+		
 	}
 
 }

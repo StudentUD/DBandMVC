@@ -6,6 +6,7 @@ public class MainView {
 	private OptionMenu vOptionMenu = null;
 	private OrdenFrame vOrdenFrame = null;
 	private Provider vProvider = null;
+	private SelectItems vSelectItems= null; 
 
 	public MainView() {
 
@@ -13,7 +14,16 @@ public class MainView {
 		vOptionMenu = new OptionMenu();
 		vProvider = new Provider();
 		vOrdenFrame = new OrdenFrame();
+		vSelectItems = new SelectItems(); 
 
+	}
+
+	public SelectItems getvSelectItems() {
+		return vSelectItems;
+	}
+
+	public void setvSelectItems(SelectItems vSelectItems) {
+		this.vSelectItems = vSelectItems;
 	}
 
 	public OptionMenu getvOptionMenu() {
