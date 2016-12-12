@@ -14,6 +14,7 @@ import javax.swing.JLabel;
 import javax.swing.JComboBox;
 import javax.swing.JButton;
 import javax.swing.JSpinner;
+import javax.swing.DefaultComboBoxModel;
 
 public class SelectItems extends JFrame {
 
@@ -49,16 +50,22 @@ public class SelectItems extends JFrame {
 		paneAddItem.setLayout(new BoxLayout(paneAddItem, BoxLayout.X_AXIS));
 		
 		cbxTipo = new JComboBox();
+		cbxTipo.setModel(new DefaultComboBoxModel(new String[] {"tipos"}));
 		paneAddItem.add(cbxTipo);
 		
 		cbxItem = new JComboBox();
+		cbxItem.setModel(new DefaultComboBoxModel(new String[] {"item"}));
 		paneAddItem.add(cbxItem);
 		
 		spQuantity = new JSpinner();
 		paneAddItem.add(spQuantity);
 		
 		btnAddItem = new JButton("Añadir Item");
+		btnAddItem.addActionListener((e) -> onActionAdditem());
 		paneAddItem.add(btnAddItem);
+		
+		
+		
 		
 		JPanel paneDesicion = new JPanel();
 		paneItemes.add(paneDesicion);
@@ -78,7 +85,7 @@ public class SelectItems extends JFrame {
 		String item = cbxItem.getSelectedItem().toString();
 		String cantidad = spQuantity.getValue().toString();
 		
-		
+		System.out.println(tipo);
 		addItemsPane(tipo, item, cantidad);
 		
 	}
@@ -94,7 +101,10 @@ public class SelectItems extends JFrame {
 		JButton btnRemoveItem = new JButton("Elimina Item");
 		panelDetailItem.add(btnRemoveItem);
 		
-		
+	
+		aItems.add(panelDetailItem);
+		paneItemes.add(panelDetailItem);
+		this.validate();
 	}
 
 }

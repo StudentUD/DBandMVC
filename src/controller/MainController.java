@@ -29,10 +29,13 @@ public class MainController {
 		view.getvOptionMenu().getBtnNewOrden().addActionListener((e) -> onActionBtnNewOrder());
 
 		// ventana provider
-
 		view.getvOrdenFrame().getBtnBSearchProvider().addActionListener((e) -> onActionBtnSearchProvider());
 		view.getvOrdenFrame().getBtnDone().addActionListener((e)-> onActionBtnDoneNewOrder());
 		view.getvOrdenFrame().getBtnCancel().addActionListener((e)-> onActionBtnSearchOrder());
+		
+		
+		
+		
 	}
 
 	private void onActionBtnDoneNewOrder() {
@@ -52,7 +55,6 @@ public class MainController {
 	}
 
 	private void  onActionBtnNewOrder() {
-		System.out.println("eroor");
 		view.getvOrdenFrame().setVisible(true);
 		view.getvOptionMenu().setVisible(false);
 		
