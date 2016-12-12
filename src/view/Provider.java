@@ -47,7 +47,7 @@ public class Provider extends JFrame {
 		lblPhone = new JLabel("Telefono");
 		txtPhone = new JTextField();
 
-		lblAdressPovider = new JLabel("Telefono");
+		lblAdressPovider = new JLabel("Direccion");
 		txtAdressProvider = new JTextField();
 
 		btnSingUpProvider = new JButton("Registrar");

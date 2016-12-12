@@ -1,4 +1,4 @@
-package model;
+package model.login;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -8,7 +8,7 @@ import java.sql.Statement;
 
 import model.conextion.PostgresDBConexion;
 
-public class LoginModel {
+public class LoginDao {
 
 	PostgresDBConexion conexion = new PostgresDBConexion("Ferreteria", "admin", "admin");
 

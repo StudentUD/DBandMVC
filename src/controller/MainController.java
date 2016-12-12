@@ -1,11 +1,10 @@
 package controller;
 
-import model.LoginModel;
 import model.MainModel;
+import model.login.LoginDao;
 import view.MainView;
 
 public class MainController {
-
 	protected MainView view = null;
 	protected MainModel model = null;
 
@@ -29,11 +28,22 @@ public class MainController {
 		view.getvOptionMenu().getBtnSearchOrden().addActionListener((e) -> onActionBtnSearchOrder());
 		view.getvOptionMenu().getBtnNewOrden().addActionListener((e) -> onActionBtnNewOrder());
 
+		// ventana provider
+
+		view.getvOrdenFrame().getBtnBSearchProvider().addActionListener((e) -> onActionBtnSearchProvider());
+		view.getvOrdenFrame().getBtnBSearchProvider().addActionListener((e) -> onActionBtnAddProvider());
+		view.getvOrdenFrame().getBtnBSearchProvider().addActionListener((e) -> onActionBtnAddProvider());
 	}
 
-	private Object onActionBtnSearchOrder() {
+	private Object onActionBtnSearchProvider() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	// levanta vista para buscar ordenes
+	private void onActionBtnSearchOrder() {
+		// TODO Auto-generated method stub
+
 	}
 
 	private Object onActionBtnNewOrder() {
@@ -48,18 +58,20 @@ public class MainController {
 
 	/** acciones llamandadas en los lambda de cada listener **/
 
+	// Ingreso al aplicativo
 	public void onActionBtnSingInLogin() {
 		System.out.println("work log");
 
-		LoginModel mLogin = new LoginModel();
-		
+		LoginDao mLogin = new LoginDao();
+
 		if (view.getvLogin().getTxtUserLogin().getText().isEmpty()
 				|| view.getvLogin().getTxtPasswordLogin().getText().isEmpty()) {
 			view.getvLogin().getLblError()
 					.setText("Debe ingresar todos los espacios para poder ingresar al aplicativo");
 
 		} else {
-			if (mLogin.singIn(view.getvLogin().getTxtUserLogin().getText().toLowerCase(),view.getvLogin().getTxtPasswordLogin().getText())) {
+			if (mLogin.singIn(view.getvLogin().getTxtUserLogin().getText().toLowerCase(),
+					view.getvLogin().getTxtPasswordLogin().getText())) {
 				System.out.println("Usuario logueado");
 				view.getvLogin().setVisible(false);
 				view.getvOptionMenu().setVisible(true);
@@ -73,30 +85,9 @@ public class MainController {
 
 	}
 
-	//////////////////////////////////////
-
-	private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
-		// TODO add your handling code here:
-
-	}
-
-	//////////////////////////////////////////
-
 	/** getter and setter **/
+
 	public MainView getView() {
 		return view;
 	}
-
-	public void setView(MainView view) {
-		this.view = view;
-	}
-
-	public MainModel getModel() {
-		return model;
-	}
-
-	public void setModel(MainModel model) {
-		this.model = model;
-	}
-
 }

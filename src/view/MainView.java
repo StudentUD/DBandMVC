@@ -6,23 +6,16 @@ public class MainView {
 	private OptionMenu vOptionMenu = null;
 	private OrdenFrame vOrdenFrame = null;
 	private Provider vProvider = null;
-	
-	public MainView(){
-		
-		
+
+	public MainView() {
+
 		vLogin = new Login();
 		vOptionMenu = new OptionMenu();
 		vProvider = new Provider();
 		vOrdenFrame = new OrdenFrame();
-		
-			
-		
-		
+
 	}
 
-
-	
-	
 	public OptionMenu getvOptionMenu() {
 		return vOptionMenu;
 	}
@@ -46,7 +39,6 @@ public class MainView {
 	public void setvProvider(Provider vProvider) {
 		this.vProvider = vProvider;
 	}
-
 
 	public Login getvLogin() {
 		return vLogin;
