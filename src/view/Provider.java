@@ -51,8 +51,10 @@ public class Provider extends JFrame {
 		txtAdressProvider = new JTextField();
 
 		btnSingUpProvider = new JButton("Registrar");
-		btnCancelSingUpProvider = new JButton("Cancelae");
+		btnCancelSingUpProvider = new JButton("Cancelar");
+		btnUpdateSingUpProvider = new JButton("Actualizar");
 
+		
 		lblError = new JLabel("############");
 
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
