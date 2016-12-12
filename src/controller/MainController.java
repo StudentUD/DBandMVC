@@ -30,10 +30,16 @@ public class MainController {
 		// ventana provider
 		view.getvOrdenFrame().getBtnBSearchProvider().addActionListener((e) -> onActionBtnSearchProvider());
 		view.getvOrdenFrame().getBtnDone().addActionListener((e)-> onActionBtnDoneNewOrder());
-		view.getvOrdenFrame().getBtnCancel().addActionListener((e)-> onActionBtnSearchOrder());
+		view.getvOrdenFrame().getBtnCancel().addActionListener((e)-> onActionBtnCancelOrder());
 		
 		
 		
+		
+	}
+
+	private void  onActionBtnCancelOrder() {
+		view.getvOrdenFrame().setVisible(false);
+		view.getvOptionMenu().setVisible(true);
 		
 	}
 
