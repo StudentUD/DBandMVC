@@ -15,7 +15,7 @@ import javax.swing.JSpinner;
 
 public class SelectItems extends JFrame {
 
-	
+		
 	private static final long serialVersionUID = 1L;
 	private JPanel paneItemes;
 

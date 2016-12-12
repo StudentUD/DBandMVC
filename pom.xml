@@ -7,13 +7,7 @@
 
 
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-		<!--here we change the start class, main or principal -->
-		<mainClass>launcher.ElferreteroLauncher</mainClass>
-	</properties>
-
+	
 	<!--Adicion de postgres -->
 
 	<dependencies>
@@ -47,6 +41,23 @@
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.2.1</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>java</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<mainClass>launcher.ElferreteroLauncher</mainClass>
+			
 				</configuration>
 			</plugin>
 		</plugins>
