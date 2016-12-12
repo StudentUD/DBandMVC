@@ -10,7 +10,7 @@ import model.conextion.PostgresDBConexion;
 
 public class LoginDao {
 
-	PostgresDBConexion conexion = new PostgresDBConexion("Ferreteria", "admin", "admin");
+	PostgresDBConexion conexion = new PostgresDBConexion();
 
 	public boolean singIn(String user, String password) {
 
