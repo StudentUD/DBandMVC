@@ -12,8 +12,7 @@ public class MainController {
 
 		view = new MainView();
 		model = new MainModel();
-
-		addListeners();
+				addListeners();
 
 	}
 
@@ -50,7 +49,13 @@ public class MainController {
 
 	// levanta vista para buscar ordenes
 	private void onActionBtnSearchOrder() {
-		// TODO Auto-generated method stub
+	String order = view.getvSearcOrder();
+	
+	if(order!=null){
+		
+		//recuperar orden
+	}
+
 
 	}
 

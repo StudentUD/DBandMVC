@@ -1,12 +1,14 @@
 package view;
 
+import javax.swing.JOptionPane;
+
 public class MainView {
 
 	private Login vLogin = null;
 	private OptionMenu vOptionMenu = null;
 	private OrdenFrame vOrdenFrame = null;
 	private Provider vProvider = null;
-	private SelectItems vSelectItems= null; 
+	private SelectItems vSelectItems = null;
 
 	public MainView() {
 
@@ -14,8 +16,16 @@ public class MainView {
 		vOptionMenu = new OptionMenu();
 		vProvider = new Provider();
 		vOrdenFrame = new OrdenFrame();
-		vSelectItems = new SelectItems(); 
+		vSelectItems = new SelectItems();
 
+	}
+
+	public String getvSearcOrder() {
+		String s = (String) JOptionPane.showInputDialog(null, "intoduzca el numero de orden a buscar", null,
+				JOptionPane.PLAIN_MESSAGE,
+				null, null, null);
+		System.out.println(s);
+		return s;
 	}
 
 	public SelectItems getvSelectItems() {
