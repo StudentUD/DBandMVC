@@ -1,7 +1,5 @@
 package view;
 
-
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -14,8 +12,8 @@ import java.awt.GridLayout;
 
 public class Login extends JFrame {
 
-	private static final long serialVersionUID = 1L;
-	// Components                    
+    private static final long serialVersionUID = 1L;
+    // Components                    
     private JTextField txtPassword;
     private JLabel lblError;
     private JButton btnSingIn;
@@ -23,6 +21,7 @@ public class Login extends JFrame {
     private JLabel lblPassword;
     private JTextField txtUserLogin;
     // End of variables declaration         
+
 	
 	
 	
@@ -113,32 +112,24 @@ public class Login extends JFrame {
 		this.lblUserLogin = lblName;
 	}
 
+    public JLabel getLblPasswordLogin() {
+        return lblPassword;
+    }
 
+    public void setLblpasswordLogin(JLabel lblPassword) {
+        this.lblPassword = lblPassword;
+    }
 
+    public JTextField getTxtUserLogin() {
+        return txtUserLogin;
+    }
 
-	public JLabel getLblPasswordLogin() {
-		return lblPassword;
-	}
+    public void setTxtUserLogin(JTextField txtName) {
+        this.txtUserLogin = txtName;
+    }
 
-
-
-
-	public void setLblpasswordLogin(JLabel lblPassword) {
-		this.lblPassword = lblPassword;
-	}
-
-
-
-
-	public JTextField getTxtUserLogin() {
-		return txtUserLogin;
-	}
-
-
-
-
-	public void setTxtUserLogin(JTextField txtName) {
-		this.txtUserLogin = txtName;
-	}
+    public static long getSerialversionuid() {
+        return serialVersionUID;
+    }
 
 }
