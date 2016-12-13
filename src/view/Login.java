@@ -8,7 +8,9 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 import javax.swing.WindowConstants;
-import javax.swing.BoxLayout;
+
+import java.awt.GridLayout;
+
 
 public class Login extends JFrame {
 
@@ -26,33 +28,28 @@ public class Login extends JFrame {
 	
 	
 	public Login() {
-
-		lblUserLogin = new JLabel("Usuario");
+		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+				getContentPane().setLayout(new GridLayout(0, 1, 0, 0));
+		
+				lblUserLogin = new JLabel("Usuario");
+						getContentPane().add(lblUserLogin);
 		
 		txtUserLogin = new JTextField();
-		txtPassword = new JTextField();
-		lblPassword = new JLabel("Contraseña");
-		btnSingIn = new JButton("Acceder");
-		lblError = new JLabel("############");
-		
-		
-		setLocationRelativeTo(null);
-		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-		getContentPane().setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
-
-		
-		getContentPane().add(lblUserLogin);
 		getContentPane().add(txtUserLogin);
+		lblPassword = new JLabel("Contraseña");
 		getContentPane().add(lblPassword);
+		txtPassword = new JTextField();
 		getContentPane().add(txtPassword);
+		btnSingIn = new JButton("Acceder");
 		getContentPane().add(btnSingIn);
+		lblError = new JLabel("");
 		getContentPane().add(lblError);
 		
 
-		pack();
-
 		
-
+		setLocationRelativeTo(null);
+		setSize(500, 200);
+		
 		
 	}// </editor-fold>
 
@@ -85,6 +82,7 @@ public class Login extends JFrame {
 
 	public void setLblError(JLabel lblError) {
 		this.lblError = lblError;
+		lblError.validate();
 	}
 
 
@@ -142,18 +140,5 @@ public class Login extends JFrame {
 	public void setTxtUserLogin(JTextField txtName) {
 		this.txtUserLogin = txtName;
 	}
-
-
-
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-	
-	
-	
-	
-	
-
 
 }
