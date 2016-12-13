@@ -11,167 +11,166 @@ import javax.swing.JTextField;
 
 public class OrdenFrame extends JFrame {
 
+    private static final long serialVersionUID = 1L;
 
-	private static final long serialVersionUID = 1L;
-	
-	private JTextField txtDate;
-	private JLabel lblProveider;
-	private JLabel lblEmployee;
-	private JLabel lblNoOrden;
-	private JLabel lblDate;
-	private JTextField txtEmployee;
-	private JTextField txtNoOrden;
-	private JTextField txtProvider;
-	private JButton btnBSearchProvider;
-	private JButton btnCancel;
-	private JButton btnDone;
+    private JTextField txtDate;
+    private JLabel lblProveider;
+    private JLabel lblEmployee;
+    private JLabel lblNoOrden;
+    private JLabel lblDate;
+    private JTextField txtEmployee;
+    private JTextField txtNoOrden;
+    private JTextField txtProvider;
+    private JButton btnBSearchProvider;
+    private JButton btnCancel;
+    private JButton btnDone;
 
-	public OrdenFrame() {
-		setLocationRelativeTo(null);
-		getContentPane().setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
+    public OrdenFrame() {
+        setLocationRelativeTo(null);
+        getContentPane().setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
 
-		lblDate = new JLabel("Fecha");
-		getContentPane().add(lblDate);
+        lblDate = new JLabel("Fecha");
+        getContentPane().add(lblDate);
 
-		txtDate = new JTextField();
-		txtDate.setText("fecha");
-		getContentPane().add(txtDate);
-		txtDate.setColumns(10);
+        txtDate = new JTextField();
+        txtDate.setText("fecha");
+        getContentPane().add(txtDate);
+        txtDate.setColumns(10);
 
-		lblNoOrden = new JLabel("No Orden");
-		getContentPane().add(lblNoOrden);
+        lblNoOrden = new JLabel("No Orden");
+        getContentPane().add(lblNoOrden);
 
-		txtNoOrden = new JTextField();
-		txtNoOrden.setText("No orden");
-		getContentPane().add(txtNoOrden);
-		txtNoOrden.setColumns(10);
+        txtNoOrden = new JTextField();
+        txtNoOrden.setText("No orden");
+        getContentPane().add(txtNoOrden);
+        txtNoOrden.setColumns(10);
 
-		lblProveider = new JLabel("Proveedor");
-		getContentPane().add(lblProveider);
+        lblProveider = new JLabel("Proveedor");
+        getContentPane().add(lblProveider);
 
-		txtProvider = new JTextField();
-		txtProvider.setText("Proovedor");
-		getContentPane().add(txtProvider);
-		txtProvider.setColumns(10);
+        txtProvider = new JTextField();
+        txtProvider.setText("Proovedor");
+        getContentPane().add(txtProvider);
+        txtProvider.setColumns(10);
 
-		lblEmployee = new JLabel("Emleado");
-		getContentPane().add(lblEmployee);
+        lblEmployee = new JLabel("Emleado");
+        getContentPane().add(lblEmployee);
 
-		txtEmployee = new JTextField();
-		txtEmployee.setText("empleado");
-		getContentPane().add(txtEmployee);
-		txtEmployee.setColumns(10);
+        txtEmployee = new JTextField();
+        txtEmployee.setText("empleado");
+        getContentPane().add(txtEmployee);
+        txtEmployee.setColumns(10);
 
-		btnBSearchProvider = new JButton("Busca proveedor");
-		btnBSearchProvider.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			}
-		});
-		getContentPane().add(btnBSearchProvider);
+        btnBSearchProvider = new JButton("Busca proveedor");
+        btnBSearchProvider.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent arg0) {
+            }
+        });
+        getContentPane().add(btnBSearchProvider);
 
-		btnCancel = new JButton("Cancelar");
-		getContentPane().add(btnCancel);
+        btnCancel = new JButton("Cancelar");
+        getContentPane().add(btnCancel);
 
-		btnDone = new JButton("Hecho");
-		getContentPane().add(btnDone);
-		
-		pack();
+        btnDone = new JButton("Hecho");
+        getContentPane().add(btnDone);
 
-	}
+        pack();
 
-	
-	/** getter and setter **/
-	
-	public JTextField getTxtDate() {
-		return txtDate;
-	}
+    }
 
-	public void setTxtDate(JTextField txtDate) {
-		this.txtDate = txtDate;
-	}
+    /**
+     * getter and setter *
+     */
+    public JTextField getTxtDate() {
+        return txtDate;
+    }
 
-	public JLabel getLblProveider() {
-		return lblProveider;
-	}
+    public void setTxtDate(JTextField txtDate) {
+        this.txtDate = txtDate;
+    }
 
-	public void setLblProveider(JLabel lblProveider) {
-		this.lblProveider = lblProveider;
-	}
+    public JLabel getLblProveider() {
+        return lblProveider;
+    }
 
-	public JLabel getLblEmployee() {
-		return lblEmployee;
-	}
+    public void setLblProveider(JLabel lblProveider) {
+        this.lblProveider = lblProveider;
+    }
 
-	public void setLblEmployee(JLabel lblEmployee) {
-		this.lblEmployee = lblEmployee;
-	}
+    public JLabel getLblEmployee() {
+        return lblEmployee;
+    }
 
-	public JLabel getLblNoOrden() {
-		return lblNoOrden;
-	}
+    public void setLblEmployee(JLabel lblEmployee) {
+        this.lblEmployee = lblEmployee;
+    }
 
-	public void setLblNoOrden(JLabel lblNoOrden) {
-		this.lblNoOrden = lblNoOrden;
-	}
+    public JLabel getLblNoOrden() {
+        return lblNoOrden;
+    }
 
-	public JLabel getLblDate() {
-		return lblDate;
-	}
+    public void setLblNoOrden(JLabel lblNoOrden) {
+        this.lblNoOrden = lblNoOrden;
+    }
 
-	public void setLblDate(JLabel lblDate) {
-		this.lblDate = lblDate;
-	}
+    public JLabel getLblDate() {
+        return lblDate;
+    }
 
-	public JTextField getTxtEmployee() {
-		return txtEmployee;
-	}
+    public void setLblDate(JLabel lblDate) {
+        this.lblDate = lblDate;
+    }
 
-	public void setTxtEmployee(JTextField txtEmployee) {
-		this.txtEmployee = txtEmployee;
-	}
+    public JTextField getTxtEmployee() {
+        return txtEmployee;
+    }
 
-	public JTextField getTxtNoOrden() {
-		return txtNoOrden;
-	}
+    public void setTxtEmployee(JTextField txtEmployee) {
+        this.txtEmployee = txtEmployee;
+    }
 
-	public void setTxtNoOrden(JTextField txtNoOrden) {
-		this.txtNoOrden = txtNoOrden;
-	}
+    public JTextField getTxtNoOrden() {
+        return txtNoOrden;
+    }
 
-	public JTextField getTxtProvider() {
-		return txtProvider;
-	}
+    public void setTxtNoOrden(JTextField txtNoOrden) {
+        this.txtNoOrden = txtNoOrden;
+    }
 
-	public void setTxtProvider(JTextField txtProvider) {
-		this.txtProvider = txtProvider;
-	}
+    public JTextField getTxtProvider() {
+        return txtProvider;
+    }
 
-	public JButton getBtnBSearchProvider() {
-		return btnBSearchProvider;
-	}
+    public void setTxtProvider(JTextField txtProvider) {
+        this.txtProvider = txtProvider;
+    }
 
-	public void setBtnBSearchProvider(JButton btnBSearchProvider) {
-		this.btnBSearchProvider = btnBSearchProvider;
-	}
+    public JButton getBtnBSearchProvider() {
+        return btnBSearchProvider;
+    }
 
-	public JButton getBtnCancel() {
-		return btnCancel;
-	}
+    public void setBtnBSearchProvider(JButton btnBSearchProvider) {
+        this.btnBSearchProvider = btnBSearchProvider;
+    }
 
-	public void setBtnCancel(JButton btnCancel) {
-		this.btnCancel = btnCancel;
-	}
+    public JButton getBtnCancel() {
+        return btnCancel;
+    }
 
-	public JButton getBtnDone() {
-		return btnDone;
-	}
+    public void setBtnCancel(JButton btnCancel) {
+        this.btnCancel = btnCancel;
+    }
 
-	public void setBtnDone(JButton btnDone) {
-		this.btnDone = btnDone;
-	}
+    public JButton getBtnDone() {
+        return btnDone;
+    }
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
+    public void setBtnDone(JButton btnDone) {
+        this.btnDone = btnDone;
+    }
+
+    public static long getSerialversionuid() {
+        return serialVersionUID;
+    }
 
 }
